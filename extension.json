@@ -3,11 +3,11 @@
 	"name": "JWTAuth",
 	"version": "2.0.0",
 	"author": [
-			"[https://github.com/jeffw16 Jeffrey Wang]",
-			"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
+		"[https://github.com/jeffw16 Jeffrey Wang]",
+		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
 	],
 	"url": "https://github.com/jeffw16/JWTAuth",
-	"descriptionmsg": "jwt-ext-desc",
+	"descriptionmsg": "jwtauth-desc",
 	"license-name": "MIT",
 	"type": "other",
 	"requires": {

@@ -33,10 +33,10 @@ class JWTAuth extends PluggableAuth {
 	 * @param JWTAuthStore $jwtAuthStore
 	 */
 	public function __construct(
-		Config             $mainConfig,
-		AuthManager        $authManager,
+		Config $mainConfig,
+		AuthManager $authManager,
 		UserIdentityLookup $userIdentityLookup,
-		JWTAuthStore       $jwtAuthStore
+		JWTAuthStore $jwtAuthStore
 	) {
 		$this->mainConfig = $mainConfig;
 		$this->authManager = $authManager;
@@ -84,7 +84,7 @@ class JWTAuth extends PluggableAuth {
 	 * @return bool true if the user has been authenticated and false otherwise
 	 */
 	public function authenticate(
-		?int    &$id,
+		?int &$id,
 		?string &$username,
 		?string &$realname,
 		?string &$email,
@@ -139,7 +139,7 @@ class JWTAuth extends PluggableAuth {
 			', Issuer: ' . $issuer
 		);
 
-		list( $id, $username ) = $this->jwtAuthStore->findUser( $subject, $issuer );
+		[ $id, $username ] = $this->jwtAuthStore->findUser( $subject, $issuer );
 		if ( $id !== null ) {
 			$this->getLogger()->debug( 'Found user with matching subject and issuer.' . PHP_EOL );
 			return true;
@@ -149,7 +149,7 @@ class JWTAuth extends PluggableAuth {
 
 		if ( $this->migrateUsersByEmail && ( $email ?? '' ) !== '' ) {
 			$this->getLogger()->debug( 'Checking for email migration.' . PHP_EOL );
-			list( $id, $username ) = $this->getMigratedIdByEmail( $email );
+			[ $id, $username ] = $this->getMigratedIdByEmail( $email );
 			if ( $id !== null ) {
 				$this->saveExtraAttributes( $id );
 				$this->getLogger()->debug( 'Migrated user ' . $username . ' by email: ' . $email . '.' . PHP_EOL );
@@ -162,8 +162,10 @@ class JWTAuth extends PluggableAuth {
 
 		if ( $this->migrateUsersByUserName ) {
 			$this->getLogger()->debug( 'Checking for username migration.' . PHP_EOL );
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
 			$id = $this->getMigratedIdByUserName( $preferred_username );
 			if ( $id !== null ) {
+				// @phan-suppress-next-line PhanTypeMismatchArgument
 				$this->saveExtraAttributes( $id );
 				$this->getLogger()->debug( 'Migrated user by username: ' . $preferred_username . '.' .
 					PHP_EOL );
@@ -219,8 +221,10 @@ class JWTAuth extends PluggableAuth {
 		} elseif ( $this->useRealNameAsUserName && ( $realname ?? '' ) !== '' ) {
 			$preferred_username = $realname;
 		} elseif ( $this->useEmailNameAsUserName && ( $email ?? '' ) !== '' ) {
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 			$pos = strpos( $email, '@' );
 			if ( $pos !== false && $pos > 0 ) {
+				// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
 				$preferred_username = substr( $email, 0, $pos );
 			} else {
 				$preferred_username = $email;
