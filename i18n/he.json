@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"jwtauth-desc": "אפשרות להיכנס לחשבון באמצעות SSO מבוסס JWT.",
+	"jwtauth-invalid-jwt": "נראה שפרמטר JWT אינו תקין",
+	"jwtauth-invalid-username": "JWT מכיל שם משתמש בלתי־תקין"
+}

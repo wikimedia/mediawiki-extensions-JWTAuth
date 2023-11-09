@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kizule"
+		]
+	},
+	"jwtauth-desc": "Омогућава пријављивање преко JWT базираног SSO-а.",
+	"jwtauth-invalid-jwt": "Изгледа да JWT параметар није исправан",
+	"jwtauth-invalid-username": "JWT садржи неисправно корисничко име"
+}

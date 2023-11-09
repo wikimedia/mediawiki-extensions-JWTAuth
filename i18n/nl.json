@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"jwtauth-desc": "Maakt aanmelden via JWT-gebaseerde SSO mogelijk.",
+	"jwtauth-invalid-jwt": "JWT-parameter lijkt ongeldig te zijn",
+	"jwtauth-invalid-username": "JWT bevat een ongeldige gebruikersnaam"
+}

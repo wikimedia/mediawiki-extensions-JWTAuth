@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"jwtauth-desc": "Ermöglicht die Anmeldung über JWT-basiertes SSO.",
+	"jwtauth-invalid-jwt": "Der JWT-Parameter scheint ungültig zu sein",
+	"jwtauth-invalid-username": "JWT enthält einen ungültigen Benutzernamen"
+}
