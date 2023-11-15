@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"jwtauth-desc": "Permitte aperir session a transverso SSO a base de JWT.",
+	"jwtauth-invalid-jwt": "Le parametro JWT non pare esser valide",
+	"jwtauth-invalid-username": "JWT contine un nomine de usator non valide"
+}
