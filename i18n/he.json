@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"jwtauth-invalid-jwt": "נראה שפרמטר JWT אינו תקין",
+	"jwtauth-invalid-username": "JWT מכיל שם משתמש בלתי־תקין"
+}

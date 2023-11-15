@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kizule"
+		]
+	},
+	"jwtauth-invalid-jwt": "Изгледа да JWT параметар није исправан",
+	"jwtauth-invalid-username": "JWT садржи неисправно корисничко име"
+}

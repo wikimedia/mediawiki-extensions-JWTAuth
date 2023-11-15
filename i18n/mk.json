@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"jwtauth-invalid-jwt": "Изгледа дека JWT-параметарот е неважечки",
+	"jwtauth-invalid-username": "JWT содржи неважечко корисничко име"
+}

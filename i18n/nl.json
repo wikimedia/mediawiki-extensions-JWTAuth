@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"jwtauth-invalid-jwt": "JWT-parameter lijkt ongeldig te zijn",
+	"jwtauth-invalid-username": "JWT bevat een ongeldige gebruikersnaam"
+}
