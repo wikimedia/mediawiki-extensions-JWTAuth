@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"jwtauth-invalid-jwt": "JWT 參數似乎無效",
+	"jwtauth-invalid-username": "JWT 包含無效的使用者名稱"
+}
