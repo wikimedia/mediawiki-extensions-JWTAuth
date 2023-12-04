@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"jwtauth-desc": "Dovoli prijavo prek enotne prijave na osnovi JWT.",
+	"jwtauth-invalid-jwt": "Parameter JWT se zdi neveljaven",
+	"jwtauth-invalid-username": "JWT vsebuje neveljavno uporabniško ime"
+}
