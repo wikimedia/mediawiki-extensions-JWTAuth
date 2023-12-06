@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"jwtauth-invalid-jwt": "Parameter JWT se zdi neveljaven",
+	"jwtauth-invalid-username": "JWT vsebuje neveljavno uporabniško ime"
+}
