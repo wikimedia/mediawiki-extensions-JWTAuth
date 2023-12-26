@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"jwtauth-desc": "JWT tabanlı SSO aracılığıyla oturum açmaya izin verin.",
+	"jwtauth-invalid-jwt": "JWT parametresi geçersiz görünüyor",
+	"jwtauth-invalid-username": "JWT geçersiz kullanıcı adı içeriyor"
+}
