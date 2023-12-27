@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"jwtauth-invalid-jwt": "JWT parametresi geçersiz görünüyor",
+	"jwtauth-invalid-username": "JWT geçersiz kullanıcı adı içeriyor"
+}
