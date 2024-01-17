@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"jwtauth-desc": "Gjør det mulig å logge inn med JWT-basert SSO.",
+	"jwtauth-invalid-jwt": "JWT-parameteren ser ut til å være ugyldig.",
+	"jwtauth-invalid-username": "JWT inneholder et ugyldig brukernavn"
+}
