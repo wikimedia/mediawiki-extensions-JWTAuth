@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"jwtauth-invalid-jwt": "JWT-parameteren ser ut til å være ugyldig.",
+	"jwtauth-invalid-username": "JWT inneholder et ugyldig brukernavn"
+}
