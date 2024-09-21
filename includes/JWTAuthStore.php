@@ -2,6 +2,8 @@
 
 namespace MediaWiki\Extension\JWTAuth;
 
+use MediaWiki\MediaWikiServices;
+
 class JWTAuthStore {
 
 	/**
@@ -10,7 +12,7 @@ class JWTAuthStore {
 	 * @param string $issuer
 	 */
 	public function saveExtraAttributes( int $id, string $subject, string $issuer ): void {
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->upsert(
 			'jwtauth',
 			[
@@ -35,7 +37,7 @@ class JWTAuthStore {
 	 * @return array
 	 */
 	public function findUser( string $subject, string $issuer ): array {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow(
 			[
 				'user',
@@ -67,7 +69,7 @@ class JWTAuthStore {
 	 * @return string|null
 	 */
 	public function getMigratedIdByUserName( string $username ): ?string {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow(
 			[
 				'user',
@@ -96,7 +98,7 @@ class JWTAuthStore {
 	 * @return array
 	 */
 	public function getMigratedIdByEmail( string $email ): array {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow(
 			[
 				'user',
