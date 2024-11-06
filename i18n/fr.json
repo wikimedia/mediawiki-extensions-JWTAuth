@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mahabarata"
+		]
+	},
+	"jwtauth-invalid-jwt": "Le paramètre JWT semble être invalide",
+	"jwtauth-invalid-username": "Le JWT contient un nom d'utilisateur invalide"
+}
