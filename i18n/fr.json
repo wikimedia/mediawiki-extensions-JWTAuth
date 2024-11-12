@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mahabarata"
+		]
+	},
+	"jwtauth-desc": "Autoriser la connexion via SSO basé sur JWT.",
+	"jwtauth-invalid-jwt": "Le paramètre JWT semble être invalide",
+	"jwtauth-invalid-username": "Le JWT contient un nom d'utilisateur invalide"
+}
