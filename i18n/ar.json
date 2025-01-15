@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"jwtauth-invalid-jwt": "يبدو أن معلمة JWT غير صالحة",
+	"jwtauth-invalid-username": "يحتوي JWT على اسم مستخدم غير صالح"
+}
