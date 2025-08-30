@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "JWTAuth",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"author": [
 		"[https://github.com/jeffw16 Jeffrey Wang]",
 		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
@@ -11,7 +11,7 @@
 	"license-name": "MIT",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.35.0",
+		"MediaWiki": ">= 1.43.0",
 		"extensions": {
 			"PluggableAuth": ">= 7.0"
 		}
