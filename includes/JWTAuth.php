@@ -2,10 +2,10 @@
 namespace MediaWiki\Extension\JWTAuth;
 
 use MediaWiki\Auth\AuthManager;
-use MediaWiki\config\Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\JWTAuth\Models\JWTAuthSettings;
 use MediaWiki\Extension\PluggableAuth\PluggableAuth;
-use MediaWiki\title\Title;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserIdentityLookup;
 use Message;
