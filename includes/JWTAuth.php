@@ -5,6 +5,7 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\Config\Config;
 use MediaWiki\Extension\JWTAuth\Models\JWTAuthSettings;
 use MediaWiki\Extension\PluggableAuth\PluggableAuth;
+use MediaWiki\Extension\PluggableAuth\PluggableAuthLogin;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserIdentityLookup;
@@ -75,6 +76,23 @@ class JWTAuth extends PluggableAuth {
 			$this->mainConfig->get( 'JWTAuth_' . $name );
 	}
 
+	public static function getExtraLoginFields(): array {
+		if ( isset( $_SERVER['HTTP_AUTHORIZATION'] ) ) {
+			$jwtDataRaw = $_SERVER['HTTP_AUTHORIZATION'];
+		} elseif ( isset( $_POST[self::JWTAUTH_POST_PARAMETER] ) ) {
+			$jwtDataRaw = $_POST[self::JWTAUTH_POST_PARAMETER];
+		} else {
+			$jwtDataRaw = '';
+		}
+		return [
+			'authHeader' => [
+				'type' => 'hidden',
+				'value' => $jwtDataRaw,
+				'skippable' => true
+			]
+		];
+	}
+
 	/**
 	 * @param int|null &$id The user's user ID
 	 * @param string|null &$username The user's username
@@ -96,7 +114,14 @@ class JWTAuth extends PluggableAuth {
 		} elseif ( isset( $_POST[self::JWTAUTH_POST_PARAMETER] ) ) {
 			$jwtDataRaw = $_POST[self::JWTAUTH_POST_PARAMETER];
 		} else {
-			$jwtDataRaw = '';
+			$extraLoginFields = $this->authManager->getAuthenticationSessionData(
+				PluggableAuthLogin::EXTRALOGINFIELDS_SESSION_KEY
+			);
+			if ( isset( $extraLoginFields['authHeader'] ) ) {
+				$jwtDataRaw = $extraLoginFields['authHeader'];
+			} else {
+				$jwtDataRaw = '';
+			}
 		}
 
 		// Clean data
