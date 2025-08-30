@@ -1,14 +1,14 @@
 <?php
 namespace MediaWiki\Extension\JWTAuth;
 
-use Config;
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\config\Config;
 use MediaWiki\Extension\JWTAuth\Models\JWTAuthSettings;
 use MediaWiki\Extension\PluggableAuth\PluggableAuth;
+use MediaWiki\title\Title;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserIdentityLookup;
 use Message;
-use Title;
 
 class JWTAuth extends PluggableAuth {
 	const JWTAUTH_POST_PARAMETER = 'Authorization';
