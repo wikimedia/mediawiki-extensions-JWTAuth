@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"jwtauth-desc": "Permitir o inicio de sesión mediante SSO baseado en JWT.",
+	"jwtauth-invalid-jwt": "O parámetro JWT semella non ser válido",
+	"jwtauth-invalid-username": "O JWT contén un nome de usuario non válido"
+}
