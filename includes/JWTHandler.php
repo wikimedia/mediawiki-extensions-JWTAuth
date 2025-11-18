@@ -195,7 +195,7 @@ class JWTHandler {
 			} else {
 				return $decodedJWTDict;
 			}
-		} catch ( InvalidArgumentException $e ) {
+		} catch ( InvalidArgumentException ) {
 			// provided key/key-array is empty or malformed.
 			$errorMessageToReturn = 'Error occurred while attempting to decode JWT. The JWT key was not valid.';
 
@@ -203,7 +203,7 @@ class JWTHandler {
 				'error' => true,
 				'errorMessage' => $errorMessageToReturn
 			];
-		} catch ( DomainException $e ) {
+		} catch ( DomainException ) {
 			// provided algorithm is unsupported OR
 			// provided key is invalid OR
 			// unknown error thrown in openSSL or libsodium OR
@@ -214,7 +214,7 @@ class JWTHandler {
 				'error' => true,
 				'errorMessage' => $errorMessageToReturn
 			];
-		} catch ( SignatureInvalidException $e ) {
+		} catch ( SignatureInvalidException ) {
 			// provided JWT signature verification failed.
 			$errorMessageToReturn = 'Error occurred while attempting to decode JWT. The JWT signature was not valid.';
 
@@ -222,7 +222,7 @@ class JWTHandler {
 				'error' => true,
 				'errorMessage' => $errorMessageToReturn
 			];
-		} catch ( BeforeValidException $e ) {
+		} catch ( BeforeValidException ) {
 			// provided JWT is trying to be used before "nbf" claim OR
 			// provided JWT is trying to be used before "iat" claim.
 			$errorMessageToReturn = 'Error occurred while attempting to decode JWT. This JWT is not yet valid.';
@@ -231,7 +231,7 @@ class JWTHandler {
 				'error' => true,
 				'errorMessage' => $errorMessageToReturn
 			];
-		} catch ( ExpiredException $e ) {
+		} catch ( ExpiredException ) {
 			// provided JWT is trying to be used after "exp" claim.
 			$errorMessageToReturn = 'Error occurred while attempting to decode JWT. This JWT is expired.';
 
@@ -239,7 +239,7 @@ class JWTHandler {
 				'error' => true,
 				'errorMessage' => $errorMessageToReturn
 			];
-		} catch ( UnexpectedValueException $e ) {
+		} catch ( UnexpectedValueException ) {
 			// provided JWT is malformed OR
 			// provided JWT is missing an algorithm / using an unsupported algorithm OR
 			// provided JWT algorithm does not match provided key OR
