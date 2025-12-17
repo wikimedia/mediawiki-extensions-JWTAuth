@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC"
+		]
+	},
+	"jwtauth-desc": "允许通过基于SSO的JWT登录。",
+	"jwtauth-invalid-jwt": "JWT参数似乎无效",
+	"jwtauth-invalid-username": "JWT包含无效用户名"
+}
