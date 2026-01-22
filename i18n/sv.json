@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefan2255"
+		]
+	},
+	"jwtauth-desc": "Tillåt inloggning via JWT-baserad SSO.",
+	"jwtauth-invalid-jwt": "JWT-parametern verkar vara ogiltig",
+	"jwtauth-invalid-username": "JWT innehåller ogiltigt användarnamn"
+}
