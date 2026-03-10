@@ -130,7 +130,7 @@ class JWTAuth extends PluggableAuth {
 		if ( empty( $cleanJWTData ) ) {
 			// Invalid, no JWT
 			$errorMessage = new Message( 'jwtauth-invalid-jwt' );
-			$this->getLogger()->error( $errorMessage );
+			$this->getLogger()->error( $errorMessage->text() );
 			return false;
 		}
 

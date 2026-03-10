@@ -168,6 +168,7 @@ class JWTHandler {
 		} catch ( Exception $ex ) {
 			$errorMessage = $ex->__toString();
 			$this->logger->debug( $errorMessage . PHP_EOL );
+			throw $ex;
 		}
 		return $key;
 	}
