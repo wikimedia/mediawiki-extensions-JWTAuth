@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tensama0415"
+		]
+	},
+	"jwtauth-desc": "JWT 기반 SSO를 통한 로그인을 허용합니다",
+	"jwtauth-invalid-jwt": "JWT 매개변수가 유효하지 않은 것 같습니다",
+	"jwtauth-invalid-username": "JWT에 유효하지 않은 사용자 이름이 포함되어 있습니다"
+}
