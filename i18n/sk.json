@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"jwtauth-desc": "Umožňuje prihlásenie cez SSO založené na JWT.",
+	"jwtauth-invalid-jwt": "Parameter JWT sa zdá byť neplatný",
+	"jwtauth-invalid-username": "JWT obsahuje neplatné používateľské meno"
+}
